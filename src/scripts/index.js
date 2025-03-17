@@ -4,7 +4,7 @@ import { createCard } from './card.js';
 
 const profileEditButton = document.querySelector('.profile__edit-button');
 const profileAddButton = document.querySelector('.profile__add-button');
-const profilePopup = document.querySelector('.popup_type_edit-profile');
+const profilePopup = document.querySelector('.popup_type_edit');
 const cardPopup = document.querySelector('.popup_type_add-card');
 const profileForm = profilePopup.querySelector('.form');
 const cardForm = cardPopup.querySelector('.form');
