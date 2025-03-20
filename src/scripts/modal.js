@@ -16,11 +16,3 @@ function handleEscClose(evt) {
     }
   }
 }
-export function openImagePopup(imagePopup, cardData) {
-  const popupImage = imagePopup.querySelector('.popup__image');
-  const popupCaption = imagePopup.querySelector('.popup__caption');
-  popupImage.src = cardData.link;
-  popupImage.alt = cardData.name;
-  popupCaption.textContent = cardData.name;
-  openPopup(imagePopup);
-}
