@@ -921,7 +921,7 @@ template {
 
 .popup {
   font-family: 'Inter', Arial, sans-serif;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, .5);
