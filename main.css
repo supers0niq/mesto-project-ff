@@ -921,21 +921,16 @@ template {
 
 .popup {
   font-family: 'Inter', Arial, sans-serif;
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, .5);
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: 10;
-  display: flex;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  user-select: none;
-  transition: visibility 0s 0.6s, opacity 0.6s;
 }
 
 .popup_opened {
@@ -944,6 +939,34 @@ template {
   transition: visibility 0s, opacity 0.3s linear;
 }
 
+.popup_is-animated {
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    transition: visibility 0s 0.6s, opacity 0.6s;
+}
+
+.popup_is-animated.popup_opened {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    user-select: auto;
+    transition: visibility 0s, opacity 0.6s;
+}
+
+.popup {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.3s, opacity 0.3s linear;
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.3s linear;
+}
 
 
 
