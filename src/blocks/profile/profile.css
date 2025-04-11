@@ -12,11 +12,20 @@
   align-items: center;
   padding: 36px 0;
 }
-
+.profile__image-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-right: 29px; 
+}
 @media screen and (max-width: 480px) {
   .profile {
     padding: 43px 0;
     flex-direction: column;
     text-align: center;
+  }
+  .profile__image-container {
+    margin-right: 0; 
+    margin-bottom: 26px; 
   }
 }

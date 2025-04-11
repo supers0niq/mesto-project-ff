@@ -27,3 +27,31 @@
   opacity: 1;
   transition: visibility 0s, opacity 0.3s linear;
 }
+.popup__input_type_error {
+  border-bottom: 1px solid #FF0000;
+}
+
+.popup__error {
+  display: none;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%; /* 12px */
+  letter-spacing: 0%;
+  color: #FF0000;
+  margin-top: 5px;
+}
+
+.popup__error_visible {
+  display: block;
+}
+
+
+.popup__button_disabled {
+  opacity: 0.2;
+  background-color: #000;
+  color: #FFF;
+  border: 1px solid #000;
+  cursor: default;
+  pointer-events: none;
+}
