@@ -515,6 +515,8 @@ template {
   margin-left: auto;
 }
 
+
+
 .profile__add-button:hover {
   opacity: 0.6;
 }
@@ -627,12 +629,32 @@ template {
 .profile__image {
   width: 120px;
   height: 120px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
   border-radius: 50%;
   background-size: cover;
   background-position: center;
   margin: 0 29px 0 0;
+  position: relative;
+}
+
+.profile__image_cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8) url(8667ac4a523e8fc42e59.svg) no-repeat center;
+  background-size: 26px 26px;
+  border: none;
+  border-radius: 50%;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+
+.profile__image-container:hover .profile__image_cover {
+  opacity: 1;
 }
 
 @media screen and (max-width: 740px) {
@@ -646,7 +668,6 @@ template {
     margin-right: 0;
   }
 }
-
 .profile {
   font-family: 'Inter', Arial, sans-serif;
   color: #fff;
@@ -654,12 +675,21 @@ template {
   align-items: center;
   padding: 36px 0;
 }
-
+.profile__image-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-right: 29px; 
+}
 @media screen and (max-width: 480px) {
   .profile {
     padding: 43px 0;
     flex-direction: column;
     text-align: center;
+  }
+  .profile__image-container {
+    margin-right: 0; 
+    margin-bottom: 26px; 
   }
 }
 
@@ -938,7 +968,34 @@ template {
   opacity: 1;
   transition: visibility 0s, opacity 0.3s linear;
 }
+.popup__input_type_error {
+  border-bottom: 1px solid #FF0000;
+}
 
+.popup__error {
+  display: none;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%; /* 12px */
+  letter-spacing: 0%;
+  color: #FF0000;
+  margin-top: 5px;
+}
+
+.popup__error_visible {
+  display: block;
+}
+
+
+.popup__button_disabled {
+  opacity: 0.2;
+  background-color: #000;
+  color: #FFF;
+  border: 1px solid #000;
+  cursor: default;
+  pointer-events: none;
+}
 .popup_is-animated {
     display: flex;
     visibility: hidden;
