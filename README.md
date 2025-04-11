@@ -26,15 +26,19 @@
 1. Клонировать репозиторий:
 ```bash
 git clone https://github.com/SuperS0niq/mesto-project-ff.git
+```
 
 2. Установить зависимости:
 ```bash
 npm install
+```
 
 3. Запустить development сервер:
 ```bash
 npm run dev
+```
 
-4. Запустить прод:
+4. Собрать production версию:
 ```bash
 npm run build
+```
