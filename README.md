@@ -8,7 +8,7 @@
 
 [**🌐 Открыть проект**](https://supers0niq.github.io/mesto-project-ff/)
 
-![Mesto Screenshot](https://i.imgur.com/EXAMPLE.jpg) *(замените на реальный скриншот)*
+
 
 ## 🛠 Технологии
 
