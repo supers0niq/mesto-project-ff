@@ -28,18 +28,21 @@ const hideInputError = (formElement, inputElement, config) => {
 const checkInputValidity = (formElement, inputElement, config) => {
   if (inputElement.validity.valueMissing) {
     inputElement.setCustomValidity("Вы пропустили это поле.");
-  } else if (inputElement.validity.typeMismatch && inputElement.type === "url") {
+  }
+  else if (inputElement.validity.typeMismatch && inputElement.type === "url") {
     inputElement.setCustomValidity("Введите адрес сайта.");
-  } else if (inputElement.dataset.regex === "text" && inputElement.value) {
+  }
+  else if (inputElement.dataset.regex === "text" && inputElement.value) {
     const textRegex = /^[A-Za-zА-Яа-яЁё\s-]+$/;
     if (!textRegex.test(inputElement.value)) {
       inputElement.setCustomValidity(
-        inputElement.dataset.errorMessage || "Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
+        inputElement.dataset.errorMessage || "Разрешены только латинские и кириллические буквы, пробелы и дефисы. Цифры запрещены."
       );
     } else {
       inputElement.setCustomValidity("");
     }
-  } else {
+  }
+  else {
     inputElement.setCustomValidity("");
   }
 
